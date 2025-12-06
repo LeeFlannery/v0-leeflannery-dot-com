@@ -7,10 +7,10 @@ import { ThemeToggle } from "./theme-toggle"
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#videos", label: "Videos" },
-  { href: "#blog", label: "Blog" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#contact", label: "Contact" },
+  { href: "https://www.youtube.com/@FullStackDrip", label: "Videos", external: true },
+  { href: "https://fullstackdrip.com", label: "Blog", external: true },
+  { href: "#projects", label: "Portfolio" },
+  { href: "https://fullstackdrip.com/contact/", label: "Contact", external: true },
 ]
 
 export function Header() {
@@ -29,15 +29,27 @@ export function Header() {
 
         {/* Navigation Links */}
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         {/* Theme Toggle */}
