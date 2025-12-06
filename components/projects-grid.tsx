@@ -19,8 +19,8 @@ const projects = [
   {
     title: "Circle Up",
     description:
-      "Non-profit SaaS platform helping organizations manage donations, volunteers, and community engagement.",
-    image: "/non-profit-dashboard-with-donation-charts.jpg",
+      "Privacy-first community platform for non-profits with secure member directories, private mailing lists, and granular privacy controls.",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=450&fit=crop",
     video: null,
     tech: ["Next.js", "Prisma", "Postgres"],
     demoUrl: "https://circle-up-alpha.vercel.app/",
@@ -30,7 +30,7 @@ const projects = [
     title: "Full Stack Drip Hub",
     description:
       "Community platform for developers to learn, share, and grow together with tutorials, discussions, and resources.",
-    image: "/developer-community-platform-with-pink-theme.jpg",
+    image: "/full-stack-drip-cover.jpg",
     video: null,
     tech: ["Next.js", "Ghost", "React"],
     demoUrl: "https://fullstackdrip.com",

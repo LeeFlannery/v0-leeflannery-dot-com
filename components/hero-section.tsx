@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { SocialLinks } from "./social-links" // Import SocialLinks component
+import { SocialLinks } from "./social-links"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -62,32 +62,60 @@ export function HeroSection() {
           className="mb-10 max-w-xl text-center font-serif text-2xl font-semibold text-foreground md:text-3xl"
         >
           I build production systems and teach developers on{" "}
-          <span className="text-brand-pink-light">Full Stack Drip</span>.
+          <a
+            href="https://www.youtube.com/@FullStackDrip"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-primary hover:underline"
+          >
+            Full Stack Drip
+          </a>
+          .
         </motion.p>
 
-        <motion.div variants={itemVariants} className="flex flex-col items-center gap-4 md:flex-row">
-          {/* Pink YouTube Button */}
+        <motion.div variants={itemVariants} className="flex w-full max-w-2xl flex-col items-stretch gap-4 md:flex-row">
+          {/* Pink YouTube Subscribe Button */}
           <motion.a
-            href="#"
+            href="https://www.youtube.com/@FullStackDrip?sub_confirmation=1"
+            target="_blank"
+            rel="noopener noreferrer"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
-            className="inline-flex h-14 w-full items-center justify-center gap-3 rounded-lg bg-primary px-8 text-lg font-medium text-primary-foreground shadow-lg transition-colors hover:bg-primary/90 md:w-auto"
+            className="inline-flex h-14 flex-1 items-center justify-center gap-3 whitespace-nowrap rounded-lg px-8 text-lg font-medium text-white shadow-lg transition-colors hover:opacity-90"
+            style={{ backgroundColor: "#E91E78" }}
           >
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93-.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
             </svg>
-            Watch Full Stack Drip on YouTube
+            Subscribe on YouTube
           </motion.a>
 
+          {/* Blue Schedule a Call Button */}
           <motion.a
-            href="#"
+            href="https://cal.com/releasemode-lee/officehours"
+            target="_blank"
+            rel="noopener noreferrer"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
-            className="inline-flex h-14 w-full items-center justify-center rounded-lg border-2 border-primary bg-transparent px-8 text-lg font-medium text-foreground transition-colors hover:bg-primary/10 md:w-auto"
+            className="inline-flex h-14 flex-1 items-center justify-center gap-3 whitespace-nowrap rounded-lg bg-secondary px-8 text-lg font-medium text-secondary-foreground shadow-lg transition-colors hover:bg-secondary/90"
           >
-            Read the Full Stack Drip Blog
+            <svg
+              className="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            Schedule a Call
           </motion.a>
         </motion.div>
 
