@@ -39,8 +39,8 @@ const projects = [
   {
     title: "Dotfile.sys",
     description:
-      "A modern dotfile management system for developers to sync and manage their configurations across machines.",
-    image: "/terminal-dotfile-manager-dark-theme.jpg",
+      "Retro terminal-styled dotfile manager for browsing, searching, and copying shell, git, editor, and AI configurations.",
+    image: "/dotfile-sys-screenshot.png",
     video: null,
     tech: ["Next.js", "TypeScript", "CLI"],
     demoUrl: "https://dotfile-sys.vercel.app/",
