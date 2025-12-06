@@ -10,8 +10,10 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _fraunces = Fraunces({ subsets: ["latin"], weight: ["400", "500", "600", "700"] })
 
 export const metadata: Metadata = {
-  title: "Lee Flannery | Full Stack Developer",
-  description: "I build production systems and teach developers on Full Stack Drip.",
+  title: "Lee Flannery | Developer Relations & Solutions Engineer",
+  description:
+    "Solutions engineer with 25 years of experience. Creator of Full Stack Drip, teaching modern web development and AI tools.",
+  keywords: ["developer relations", "DevRel", "solutions engineer", "AI platform", "Next.js", "TypeScript"],
   generator: "v0.app",
   icons: {
     icon: "/favicon.png",
