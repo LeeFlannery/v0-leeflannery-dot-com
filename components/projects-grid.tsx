@@ -12,14 +12,15 @@ const projects = [
     title: "Full Stack Drip",
     description:
       "Developer experience writing, videos, and social media. Talks on Dev Rel, Tech Advocacy and shipping code.",
-    image: "/full-stack-drip-cover.jpg",
+    image: "/full-stack-drip-logo.png",
     video: null,
-    tech: ["Ghost", "Writing", "Video Production", "Community Building", "Teaching"],
+    tech: ["Ghost", "OBS", "DaVinci Resolve", "YouTube", "Figma"],
     demoUrl: "https://fullstackdrip.com",
     codeUrl: null,
-    breakdownUrl: null,
-    cardBg: null,
+    breakdownUrl: "/projects/full-stack-drip",
+    cardBg: "#FDF2F8",
     logos: [{ src: "/logos/ghost-orb.png", alt: "Ghost" }],
+    imageFill: true, // added imageFill to make logo fill the card
   },
   {
     title: "Release Mode",
@@ -36,6 +37,7 @@ const projects = [
       { src: "/logos/astro.svg", alt: "Astro" },
       { src: "/logos/vercel.svg", alt: "Vercel" },
     ],
+    imageFill: true,
   },
   {
     title: "HushCut",
@@ -49,6 +51,7 @@ const projects = [
     breakdownUrl: null,
     cardBg: null,
     logos: [],
+    imageFill: false,
   },
   {
     title: "Circle Up",
@@ -62,6 +65,7 @@ const projects = [
     breakdownUrl: "/projects/circle-up",
     cardBg: "#FEF3E2",
     logos: [{ src: "/logos/vercel.svg", alt: "Vercel" }],
+    imageFill: false,
   },
   {
     title: "Dotfile.sys",
@@ -69,12 +73,13 @@ const projects = [
       "Retro terminal-styled dotfile manager for browsing, searching, and copying shell, git, editor, and AI configurations.",
     image: "/dotfile-sys-screenshot.png",
     video: null,
-    tech: ["Next.js", "TypeScript", "CLI"],
+    tech: ["Next.js 16", "TypeScript", "Tailwind v4", "Radix UI", "Vercel"],
     demoUrl: "https://dotfile-sys.vercel.app/",
-    codeUrl: "#",
-    breakdownUrl: null,
-    cardBg: null,
-    logos: [],
+    codeUrl: "https://github.com/LeeFlannery/v0-dotfile-directory-web-app",
+    breakdownUrl: "/projects/dotfile-sys",
+    cardBg: "#1a1a1a",
+    logos: [{ src: "/logos/vercel.svg", alt: "Vercel" }],
+    imageFill: false,
   },
 ]
 
@@ -101,10 +106,16 @@ const techColors: Record<string, string> = {
   SEO: "bg-brand-teal text-black",
   Vercel: "bg-black text-white",
   "Next.js 15": "bg-black text-white",
+  "Next.js 16": "bg-black text-white",
   Supabase: "bg-[#3ECF8E] text-black",
   "Tailwind v4": "bg-[#06B6D4] text-black",
   "React Hook Form": "bg-[#EC5990] text-white",
   Zod: "bg-[#3068B7] text-white",
+  OBS: "bg-[#FF5D01] text-white",
+  "DaVinci Resolve": "bg-[#FCB32C] text-black",
+  YouTube: "bg-[#FF0000] text-white",
+  Figma: "bg-[#F24E1E] text-white",
+  "Radix UI": "bg-[#9333EA] text-white",
 }
 
 function ProjectCard({ project, index }: { project: (typeof projects)[0]; index: number }) {
@@ -151,15 +162,17 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="h-full"
     >
       <motion.div
-        className={`group relative overflow-hidden rounded-2xl bg-muted/50 border border-border ${project.breakdownUrl ? "cursor-pointer" : ""}`}
+        className={`group relative overflow-hidden rounded-2xl bg-muted/50 border border-border h-full flex flex-col ${project.breakdownUrl ? "cursor-pointer" : ""}`}
         style={project.cardBg ? { backgroundColor: project.cardBg } : undefined}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleCardClick}
-        whileHover={{ y: -8, scale: 1.02 }}
-        transition={{ duration: 0.3 }}
+        initial={{ y: 0, scale: 1 }}
+        animate={{ y: isHovered ? -8 : 0, scale: isHovered ? 1.02 : 1 }}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
       >
         {/* Image/Video Container */}
         <div className="relative aspect-video overflow-hidden">
@@ -170,11 +183,17 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
               src={project.image || "/placeholder.svg"}
               alt={project.title}
               fill
-              className={`transition-transform duration-500 group-hover:scale-110 ${project.cardBg ? "object-contain p-4" : "object-cover"}`}
+              className={`transition-transform duration-500 ${
+                project.imageFill ? "object-cover" : project.cardBg ? "object-contain p-4" : "object-cover"
+              }`}
+              style={{ transform: isHovered ? "scale(1.1)" : "scale(1)" }}
             />
           )}
           {/* Overlay on hover */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300"
+            style={{ opacity: isHovered ? 1 : 0 }}
+          />
 
           {project.logos && project.logos.length > 0 && (
             <div className="absolute bottom-3 right-3 flex items-center gap-2">
@@ -194,7 +213,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
         </div>
 
         {/* Content */}
-        <div className="p-6 bg-card">
+        <div className="p-6 bg-card flex-1 flex flex-col">
           <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
           <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{project.description}</p>
 
@@ -210,20 +229,22 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
             ))}
           </div>
 
+          {/* Buttons */}
           {hasActions && (
-            <div className="pt-4 border-t border-border">
+            <div className="pt-4 border-t border-border mt-auto">
               <p className="text-xs text-muted-foreground uppercase tracking-wide mb-3">Explore</p>
               <motion.div
-                className="flex gap-2"
+                className="grid grid-cols-3 gap-2"
                 variants={buttonContainerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
               >
                 {project.breakdownUrl && (
-                  <motion.div variants={buttonVariants} className="flex-1">
+                  <motion.div variants={buttonVariants}>
                     <Link
                       href={project.breakdownUrl}
+                      onClick={(e) => e.stopPropagation()}
                       className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 active:scale-95"
                     >
                       <FileText className="h-4 w-4" />
@@ -232,11 +253,12 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                   </motion.div>
                 )}
                 {project.demoUrl && project.demoUrl !== "#" && (
-                  <motion.div variants={buttonVariants} className="flex-1">
+                  <motion.div variants={buttonVariants}>
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-muted text-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-muted/80 active:scale-95"
                     >
                       <ExternalLink className="h-4 w-4" />
@@ -245,11 +267,12 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                   </motion.div>
                 )}
                 {project.codeUrl && project.codeUrl !== "#" && (
-                  <motion.div variants={buttonVariants} className="flex-1">
+                  <motion.div variants={buttonVariants}>
                     <a
                       href={project.codeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-muted text-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-muted/80 active:scale-95"
                     >
                       <Github className="h-4 w-4" />
@@ -283,7 +306,7 @@ export function ProjectsGrid() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}

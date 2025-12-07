@@ -2,7 +2,15 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Play, BookOpen } from "lucide-react"
+import { BookOpen } from "lucide-react"
+
+function YouTubeIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+  )
+}
 
 export function VideoShowcase() {
   return (
@@ -44,23 +52,23 @@ export function VideoShowcase() {
           </a>
         </p>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 max-w-lg mx-auto">
+        {/* CTAs - Made buttons equal width with min-w and same structure */}
+        <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4 mt-8 max-w-xl mx-auto">
           <a
             href="https://www.youtube.com/@FullStackDrip?sub_confirmation=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 w-full inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-base font-medium text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl whitespace-nowrap"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-base font-medium text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl min-w-[200px]"
             style={{ backgroundColor: "#E91E78" }}
           >
-            <Play className="w-5 h-5 fill-current" />
+            <YouTubeIcon className="w-5 h-5" />
             Watch on YouTube
           </a>
           <a
             href="https://fullstackdrip.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-blue px-6 py-3 text-base font-medium text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl whitespace-nowrap"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-brand-blue px-6 py-3 text-base font-medium text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl min-w-[200px]"
           >
             <BookOpen className="w-5 h-5" />
             Read on Fullstackdrip.com
