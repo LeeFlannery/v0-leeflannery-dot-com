@@ -5,6 +5,7 @@ import { ExternalLink, Github, FileText } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 const projects = [
   {
@@ -52,15 +53,15 @@ const projects = [
   {
     title: "Circle Up",
     description:
-      "Privacy-first community platform for non-profits with secure member directories, private mailing lists, and granular privacy controls.",
+      "Privacy-focused community platform with secure member directories, friends system, private mailing lists, and granular privacy controls.",
     image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=450&fit=crop",
     video: null,
-    tech: ["Next.js", "Prisma", "Postgres"],
+    tech: ["Next.js 15", "Supabase", "Tailwind v4", "React Hook Form", "Zod"],
     demoUrl: "https://circle-up-alpha.vercel.app/",
-    codeUrl: "#",
-    breakdownUrl: null,
-    cardBg: null,
-    logos: [],
+    codeUrl: "https://github.com/LeeFlannery/circle-up",
+    breakdownUrl: "/projects/circle-up",
+    cardBg: "#FEF3E2",
+    logos: [{ src: "/logos/vercel.svg", alt: "Vercel" }],
   },
   {
     title: "Dotfile.sys",
@@ -99,10 +100,16 @@ const techColors: Record<string, string> = {
   pnpm: "bg-[#F69220] text-black",
   SEO: "bg-brand-teal text-black",
   Vercel: "bg-black text-white",
+  "Next.js 15": "bg-black text-white",
+  Supabase: "bg-[#3ECF8E] text-black",
+  "Tailwind v4": "bg-[#06B6D4] text-black",
+  "React Hook Form": "bg-[#EC5990] text-white",
+  Zod: "bg-[#3068B7] text-white",
 }
 
 function ProjectCard({ project, index }: { project: (typeof projects)[0]; index: number }) {
   const [isHovered, setIsHovered] = useState(false)
+  const router = useRouter()
 
   const hasActions =
     project.breakdownUrl || (project.demoUrl && project.demoUrl !== "#") || (project.codeUrl && project.codeUrl !== "#")
@@ -132,6 +139,12 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
     },
   }
 
+  const handleCardClick = () => {
+    if (project.breakdownUrl) {
+      router.push(project.breakdownUrl)
+    }
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -140,10 +153,11 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <motion.div
-        className="group relative overflow-hidden rounded-2xl bg-muted/50 border border-border"
+        className={`group relative overflow-hidden rounded-2xl bg-muted/50 border border-border ${project.breakdownUrl ? "cursor-pointer" : ""}`}
         style={project.cardBg ? { backgroundColor: project.cardBg } : undefined}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={handleCardClick}
         whileHover={{ y: -8, scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
