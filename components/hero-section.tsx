@@ -61,7 +61,7 @@ export function HeroSection() {
           variants={itemVariants}
           className="mb-10 max-w-xl text-center font-serif text-2xl font-semibold text-foreground md:text-3xl"
         >
-          I build production systems and teach developers on{" "}
+          I ship code and teach developers on{" "}
           <a
             href="https://www.youtube.com/@FullStackDrip"
             target="_blank"

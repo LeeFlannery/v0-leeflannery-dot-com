@@ -19,7 +19,7 @@ const footerLinks = {
     { name: "Schedule a Call", href: "https://cal.com/releasemode-lee/officehours" },
   ],
   resources: [
-    { name: "Newsletter", href: "https://fullstackdrip.com/#/portal/" },
+    { name: "Newsletter", href: "https://fullstackdrip.com/membership/" },
     { name: "Amazon", href: "https://amazon.com/shop/fullstackdrip" },
   ],
 }

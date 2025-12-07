@@ -27,7 +27,7 @@ const primaryLinks = [
 const secondaryLinks = [
   {
     name: "Newsletter",
-    href: "https://fullstackdrip.com/#/portal/",
+    href: "https://fullstackdrip.com/membership/",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
         <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />

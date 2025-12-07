@@ -1,11 +1,41 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, FileText } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 
 const projects = [
+  {
+    title: "Full Stack Drip",
+    description:
+      "Developer experience writing, videos, and social media. Talks on Dev Rel, Tech Advocacy and shipping code.",
+    image: "/full-stack-drip-cover.jpg",
+    video: null,
+    tech: ["Ghost", "Writing", "Video Production", "Community Building", "Teaching"],
+    demoUrl: "https://fullstackdrip.com",
+    codeUrl: null,
+    breakdownUrl: null,
+    cardBg: null,
+    logos: [{ src: "/logos/ghost-orb.png", alt: "Ghost" }],
+  },
+  {
+    title: "Release Mode",
+    description:
+      "AI-powered solutions architecture for growing companies. Bridging executive vision and full stack reality.",
+    image: "/release-mode-hero.webp",
+    video: null,
+    tech: ["Astro", "TypeScript", "Tailwind", "MDX", "PartyTown", "pnpm", "Vercel"],
+    demoUrl: "https://releasemode.com",
+    codeUrl: "https://github.com/leeflannery/releasemode",
+    breakdownUrl: "/projects/release-mode",
+    cardBg: "#F5C243",
+    logos: [
+      { src: "/logos/astro.svg", alt: "Astro" },
+      { src: "/logos/vercel.svg", alt: "Vercel" },
+    ],
+  },
   {
     title: "HushCut",
     description:
@@ -15,6 +45,9 @@ const projects = [
     tech: ["Next.js", "Python", "FFmpeg"],
     demoUrl: "#",
     codeUrl: "#",
+    breakdownUrl: null,
+    cardBg: null,
+    logos: [],
   },
   {
     title: "Circle Up",
@@ -25,16 +58,9 @@ const projects = [
     tech: ["Next.js", "Prisma", "Postgres"],
     demoUrl: "https://circle-up-alpha.vercel.app/",
     codeUrl: "#",
-  },
-  {
-    title: "Full Stack Drip Hub",
-    description:
-      "Community platform for developers to learn, share, and grow together with tutorials, discussions, and resources.",
-    image: "/full-stack-drip-cover.jpg",
-    video: null,
-    tech: ["Next.js", "Ghost", "React"],
-    demoUrl: "https://fullstackdrip.com",
-    codeUrl: "#",
+    breakdownUrl: null,
+    cardBg: null,
+    logos: [],
   },
   {
     title: "Dotfile.sys",
@@ -45,6 +71,9 @@ const projects = [
     tech: ["Next.js", "TypeScript", "CLI"],
     demoUrl: "https://dotfile-sys.vercel.app/",
     codeUrl: "#",
+    breakdownUrl: null,
+    cardBg: null,
+    logos: [],
   },
 ]
 
@@ -58,10 +87,50 @@ const techColors: Record<string, string> = {
   React: "bg-brand-blue-light text-black",
   TypeScript: "bg-secondary text-secondary-foreground",
   CLI: "bg-muted-foreground text-white",
+  AI: "bg-brand-purple text-white",
+  Writing: "bg-primary text-primary-foreground",
+  "Video Production": "bg-brand-yellow text-black",
+  "Community Building": "bg-brand-green text-black",
+  Teaching: "bg-brand-blue text-white",
+  Astro: "bg-[#FF5D01] text-white",
+  Tailwind: "bg-[#06B6D4] text-black",
+  MDX: "bg-[#FCB32C] text-black",
+  PartyTown: "bg-[#8B5CF6] text-white",
+  pnpm: "bg-[#F69220] text-black",
+  SEO: "bg-brand-teal text-black",
+  Vercel: "bg-black text-white",
 }
 
 function ProjectCard({ project, index }: { project: (typeof projects)[0]; index: number }) {
   const [isHovered, setIsHovered] = useState(false)
+
+  const hasActions =
+    project.breakdownUrl || (project.demoUrl && project.demoUrl !== "#") || (project.codeUrl && project.codeUrl !== "#")
+
+  const buttonContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  }
+
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 10, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 20,
+      },
+    },
+  }
 
   return (
     <motion.div
@@ -72,6 +141,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
     >
       <motion.div
         className="group relative overflow-hidden rounded-2xl bg-muted/50 border border-border"
+        style={project.cardBg ? { backgroundColor: project.cardBg } : undefined}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         whileHover={{ y: -8, scale: 1.02 }}
@@ -86,44 +156,36 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
               src={project.image || "/placeholder.svg"}
               alt={project.title}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              className={`transition-transform duration-500 group-hover:scale-110 ${project.cardBg ? "object-contain p-4" : "object-cover"}`}
             />
           )}
           {/* Overlay on hover */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-          {/* Links overlay */}
-          <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {project.demoUrl && project.demoUrl !== "#" && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <ExternalLink className="h-5 w-5" />
-              </a>
-            )}
-            {project.codeUrl && project.codeUrl !== "#" && (
-              <a
-                href={project.codeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-            )}
-          </div>
+          {project.logos && project.logos.length > 0 && (
+            <div className="absolute bottom-3 right-3 flex items-center gap-2">
+              {project.logos.map((logo) => (
+                <div key={logo.alt} className="h-8 w-8 rounded-lg bg-white/90 p-1.5 shadow-md">
+                  <Image
+                    src={logo.src || "/placeholder.svg"}
+                    alt={logo.alt}
+                    width={20}
+                    height={20}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-6 bg-card">
           <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
           <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{project.description}</p>
 
           {/* Tech badges */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-4">
             {project.tech.map((tech) => (
               <span
                 key={tech}
@@ -133,6 +195,57 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
               </span>
             ))}
           </div>
+
+          {hasActions && (
+            <div className="pt-4 border-t border-border">
+              <p className="text-xs text-muted-foreground uppercase tracking-wide mb-3">Explore</p>
+              <motion.div
+                className="flex gap-2"
+                variants={buttonContainerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                {project.breakdownUrl && (
+                  <motion.div variants={buttonVariants} className="flex-1">
+                    <Link
+                      href={project.breakdownUrl}
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 active:scale-95"
+                    >
+                      <FileText className="h-4 w-4" />
+                      Tech
+                    </Link>
+                  </motion.div>
+                )}
+                {project.demoUrl && project.demoUrl !== "#" && (
+                  <motion.div variants={buttonVariants} className="flex-1">
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-muted text-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-muted/80 active:scale-95"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Site
+                    </a>
+                  </motion.div>
+                )}
+                {project.codeUrl && project.codeUrl !== "#" && (
+                  <motion.div variants={buttonVariants} className="flex-1">
+                    <a
+                      href={project.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-muted text-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-muted/80 active:scale-95"
+                    >
+                      <Github className="h-4 w-4" />
+                      Code
+                    </a>
+                  </motion.div>
+                )}
+              </motion.div>
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -150,7 +263,7 @@ export function ProjectsGrid() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Portfolio.</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A selection of things I&apos;ve built, shipped, and am currently working on.
           </p>
