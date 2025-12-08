@@ -215,7 +215,7 @@ export default function FullStackDripPage() {
             <div className="p-6 rounded-xl bg-card border border-border">
               <h3 className="font-semibold text-foreground mb-2">Community Driven</h3>
               <p className="text-muted-foreground">
-                Content shaped by what developers actually need, not what gets the most clicks.
+                Content shaped by what developers need, not what gets the most clicks.
               </p>
             </div>
           </div>

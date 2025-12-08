@@ -8,7 +8,7 @@ export function AboutSection() {
     {
       heading: "Hi, I'm Lee!",
       content:
-        "I've spent two decades doing the work DevRel teams do: building demos, explaining complex systems to different audiences, creating documentation developers actually use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users - but what I enjoy most is helping other developers get unstuck.",
+        "I've spent two decades doing the work DevRel teams do: building demos, explaining complex systems to different audiences, creating documentation developers use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users - but what I enjoy most is helping other developers get unstuck.",
     },
     {
       heading: null,
@@ -18,7 +18,7 @@ export function AboutSection() {
     {
       heading: "Current Focus",
       content:
-        "Deep in AI-assisted development. Building with Claude Code and Cursor daily, exploring MCP server implementations, and figuring out multi-model orchestration with OpenRouter and AWS Bedrock. Documenting what actually works vs. what's just hype.",
+        "Deep in AI-assisted development. Building with Claude Code and Cursor daily, exploring MCP server implementations, and figuring out multi-model orchestration with OpenRouter and AWS Bedrock. Documenting what works vs. what's just hype.",
     },
     {
       heading: null,

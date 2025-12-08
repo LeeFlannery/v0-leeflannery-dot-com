@@ -49,30 +49,58 @@ export function HeroSection() {
         initial="hidden"
         animate="visible"
       >
-        {/* Heading */}
         <motion.h1
           variants={itemVariants}
-          className="mb-4 text-center font-serif text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl"
+          className="mb-1 text-center font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl"
         >
           Lee Flannery
         </motion.h1>
 
-        <motion.p
-          variants={itemVariants}
-          className="mb-10 max-w-xl text-center font-serif text-2xl font-semibold text-foreground md:text-3xl"
-        >
-          I ship code and teach developers on{" "}
+        <motion.p variants={itemVariants} className="mb-6 text-center text-lg md:text-xl">
+          Creator,{" "}
           <a
             href="https://www.youtube.com/@FullStackDrip"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-primary hover:underline"
+            className="font-bold text-brand-pink hover:underline"
           >
             Full Stack Drip
           </a>
-          .
         </motion.p>
 
+        <motion.h2
+          variants={itemVariants}
+          className="mb-4 text-center font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl"
+        >
+          I build platforms and teach developers.
+        </motion.h2>
+
+        <motion.p
+          variants={itemVariants}
+          className="mb-10 max-w-2xl text-center text-lg text-muted-foreground md:text-xl"
+        >
+          25 years shipping production code. Now creating{" "}
+          <a
+            href="https://www.youtube.com/@FullStackDrip"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-brand-pink hover:underline"
+          >
+            videos
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://fullstackdrip.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-brand-blue hover:underline"
+          >
+            writing
+          </a>{" "}
+          for developers who want to understand how modern stacks work in production.
+        </motion.p>
+
+        {/* Buttons */}
         <motion.div variants={itemVariants} className="flex w-full max-w-2xl flex-col items-stretch gap-4 md:flex-row">
           {/* Pink YouTube Subscribe Button */}
           <motion.a
@@ -119,6 +147,7 @@ export function HeroSection() {
           </motion.a>
         </motion.div>
 
+        {/* Social Links */}
         <motion.div variants={itemVariants} className="mt-10">
           <SocialLinks />
         </motion.div>
