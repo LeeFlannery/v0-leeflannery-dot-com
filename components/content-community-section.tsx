@@ -45,7 +45,7 @@ export function ContentCommunitySection() {
           <div className="bg-card rounded-xl shadow-lg overflow-hidden border border-border max-w-xs mx-auto md:max-w-none">
             <div className="aspect-[9/16] w-full">
               <iframe
-                src="https://www.instagram.com/reel/DPkZ_mZEa3D/embed"
+                src="https://www.instagram.com/p/DQmotIJkcJm/embed"
                 className="w-full h-full"
                 allowFullScreen
                 allow="encrypted-media"
