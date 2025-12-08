@@ -130,6 +130,35 @@ export function ContentCommunitySection() {
           </p>
         </div>
 
+        {/* Latest Long-Form Content */}
+        <div className="mb-16">
+          <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8 text-center">
+            Latest Long-Form Content
+          </h3>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-border">
+              <iframe
+                src="https://www.youtube.com/embed/ufa-RCCkSx8?list=PL1KMjfUN0pZSH94lohu71AjIvcq5TXrO0"
+                title="Full Stack Drip Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <p className="text-center text-muted-foreground text-sm mt-4">
+              See more at{" "}
+              <a
+                href="https://youtube.com/@FullStackDrip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-blue hover:text-foreground transition-colors underline underline-offset-2"
+              >
+                youtube.com/@FullStackDrip
+              </a>
+            </p>
+          </div>
+        </div>
+
         {/* LinkedIn Callout */}
         <div className="bg-blue-600 rounded-xl p-8 md:p-10 mb-16 text-white shadow-xl">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
