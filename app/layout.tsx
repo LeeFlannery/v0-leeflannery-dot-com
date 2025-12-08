@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "Two decades shipping production code. Creator of Full Stack Drip, teaching modern web development and AI tools.",
   keywords: ["developer relations", "DevRel", "solutions engineer", "AI platform", "Next.js", "TypeScript"],
   generator: "v0.app",
+  metadataBase: new URL("https://leeflannery.com"),
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
@@ -26,14 +27,6 @@ export const metadata: Metadata = {
       "Two decades shipping production code. Creator of Full Stack Drip, teaching modern web development and AI tools.",
     url: "https://leeflannery.com",
     siteName: "Lee Flannery",
-    images: [
-      {
-        url: "/images/lee-usa-hawaii-yellow.jpg",
-        width: 1200,
-        height: 1200,
-        alt: "Lee Flannery",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -42,7 +35,6 @@ export const metadata: Metadata = {
     title: "Lee Flannery | Developer Relations & Solutions Engineer",
     description:
       "Two decades shipping production code. Creator of Full Stack Drip, teaching modern web development and AI tools.",
-    images: ["/images/lee-usa-hawaii-yellow.jpg"],
   },
 }
 

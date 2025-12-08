@@ -37,6 +37,7 @@ export default function LeeFlanneryComPage() {
       items: [
         { name: "Vercel", description: "Edge deployment and previews" },
         { name: "v0", description: "AI-assisted development" },
+        { name: "Bun", description: "Fast package manager and runtime" },
       ],
     },
   ]
@@ -76,8 +77,7 @@ export default function LeeFlanneryComPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      {/* Hero */}
-      <section className="relative py-24 px-4 bg-gradient-to-br from-primary/10 via-background to-brand-blue/10">
+      <section className="relative py-24 px-4 bg-gradient-to-br from-brand-blue/20 via-background to-brand-purple/10">
         <div className="max-w-4xl mx-auto">
           <Link
             href="/#projects"
@@ -93,8 +93,8 @@ export default function LeeFlanneryComPage() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-6 mb-6"
           >
-            <div className="h-20 w-20 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
-              <span className="text-3xl font-bold text-primary-foreground">LF</span>
+            <div className="h-20 w-20 rounded-2xl bg-brand-blue flex items-center justify-center shadow-lg">
+              <span className="text-3xl font-bold text-white">LF</span>
             </div>
             <div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground">LeeFlannery.com</h1>
@@ -114,16 +114,15 @@ export default function LeeFlanneryComPage() {
         </div>
       </section>
 
-      {/* Screenshot */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-xl overflow-hidden border border-border shadow-2xl">
+          <div className="rounded-xl overflow-hidden border border-border shadow-2xl bg-[#FEF9C3]">
             <Image
-              src="/modern-portfolio-website-dark-mode-with-pink-accen.jpg"
-              alt="LeeFlannery.com Screenshot"
+              src="/images/lee-usa-hawaii-yellow.jpg"
+              alt="Lee Flannery"
               width={1200}
               height={600}
-              className="w-full"
+              className="w-full object-contain max-h-[500px]"
             />
           </div>
         </div>
@@ -143,7 +142,7 @@ export default function LeeFlanneryComPage() {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="p-6 rounded-xl bg-card border border-border"
               >
-                <feature.icon className="h-8 w-8 text-primary mb-4" />
+                <feature.icon className="h-8 w-8 text-brand-blue mb-4" />
                 <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>
               </motion.div>
@@ -170,7 +169,7 @@ export default function LeeFlanneryComPage() {
                 <ul className="space-y-3">
                   {category.items.map((item) => (
                     <li key={item.name} className="flex items-start gap-3">
-                      <span className="h-2 w-2 rounded-full bg-primary mt-2 shrink-0" />
+                      <span className="h-2 w-2 rounded-full bg-brand-blue mt-2 shrink-0" />
                       <div>
                         <span className="font-medium text-foreground">{item.name}</span>
                         <p className="text-sm text-muted-foreground">{item.description}</p>
@@ -187,16 +186,11 @@ export default function LeeFlanneryComPage() {
       {/* The v0 Experiment */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-foreground mb-4">The v0 Experiment</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-4">Built with v0</h2>
           <div className="prose prose-neutral dark:prose-invert max-w-none">
             <p className="text-muted-foreground">
-              This entire site was built using v0, Vercel's AI-powered development tool. Every component, animation, and
-              page was developed through conversation - no manual coding outside of v0.
-            </p>
-            <p className="text-muted-foreground mt-4">
-              It's a practical demonstration of what's possible with AI-assisted development today: responsive layouts,
-              accessible components, smooth animations, dark mode, analytics integration, and a cohesive design system -
-              all built iteratively through natural language prompts.
+              Bootstrapped with v0, Vercel's AI-powered development tool. It was a fast way to scaffold components,
+              iterate on layouts, and get the design system in place. From there, the usual tweaking and refining.
             </p>
           </div>
         </div>
@@ -211,7 +205,7 @@ export default function LeeFlanneryComPage() {
               href="https://leeflannery.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-blue text-white font-medium hover:opacity-90 transition-opacity"
             >
               <ExternalLink className="h-4 w-4" />
               You're Already Here
