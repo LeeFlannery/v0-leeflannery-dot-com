@@ -131,7 +131,7 @@ export function ContentCommunitySection() {
         </div>
 
         {/* LinkedIn Callout */}
-        <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-purple-600 rounded-xl p-8 md:p-10 mb-16 text-white shadow-xl">
+        <div className="bg-blue-600 rounded-xl p-8 md:p-10 mb-16 text-white shadow-xl">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <div className="flex-shrink-0">
               <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
