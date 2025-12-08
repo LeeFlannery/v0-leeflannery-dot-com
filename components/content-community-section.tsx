@@ -171,7 +171,7 @@ export function ContentCommunitySection() {
                 <span className="text-white/80 text-sm font-medium uppercase tracking-wider">Featured Post</span>
               </div>
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-white leading-tight text-balance">
-                This Post About a JavaScript Runtime Got 116K+ Impressions and Made Some People Mad
+                116K+ Developers Saw This Post About Bun. Some Got Mad.
               </h3>
             </div>
 
@@ -180,56 +180,40 @@ export function ContentCommunitySection() {
               {/* Story intro */}
               <p className="text-lg md:text-xl text-foreground mb-8 leading-relaxed">
                 Anthropic acquired Bun. I wrote why this matters for AI development. Some developers agreed. Some
-                didn&apos;t. <span className="font-semibold">Everyone engaged.</span>
+                didn&apos;t. <span className="font-semibold">Everyone engaged.</span>{" "}
+                <span className="text-muted-foreground">That&apos;s the goal.</span>
               </p>
 
               {/* Big Stats Grid */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">
-                {/* Primary Stat - Impressions */}
-                <div className="col-span-2 bg-[#0A66C2]/5 border-2 border-[#0A66C2]/20 rounded-xl p-6 text-center">
-                  <Eye className="w-8 h-8 text-[#0A66C2] mx-auto mb-2" />
-                  <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A66C2]">116,647</p>
-                  <p className="text-sm text-muted-foreground mt-1">impressions</p>
-                  <p className="text-xs text-[#0A66C2] font-medium mt-2">That&apos;s a lot of developers reached.</p>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+                {/* Hero Stat - Impressions - Much larger */}
+                <div className="lg:col-span-2 bg-[#0A66C2]/10 border-2 border-[#0A66C2]/30 rounded-2xl p-8 md:p-10 text-center">
+                  <Eye className="w-12 h-12 text-[#0A66C2] mx-auto mb-4" />
+                  <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#0A66C2]">116,647</p>
+                  <p className="text-lg text-muted-foreground mt-2">impressions</p>
+                  <p className="text-sm text-[#0A66C2] font-semibold mt-3">That&apos;s a lot of developers reached.</p>
                 </div>
 
-                {/* New Followers */}
-                <div className="bg-muted/50 rounded-xl p-5 text-center flex flex-col justify-center">
-                  <UserPlus className="w-6 h-6 text-brand-green mx-auto mb-2" />
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">99</p>
-                  <p className="text-xs text-muted-foreground mt-1">new followers</p>
-                  <p className="text-xs text-brand-green font-medium mt-1">in 48 hours</p>
-                </div>
-
-                {/* Engagement */}
-                <div className="bg-muted/50 rounded-xl p-5 text-center flex flex-col justify-center">
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <Heart className="w-5 h-5 text-brand-pink" />
-                    <MessageCircle className="w-5 h-5 text-brand-pink" />
+                {/* Secondary stats stacked */}
+                <div className="flex flex-col gap-4">
+                  {/* New Followers */}
+                  <div className="bg-muted/50 rounded-xl p-5 text-center flex-1 flex flex-col justify-center">
+                    <UserPlus className="w-6 h-6 text-brand-green mx-auto mb-2" />
+                    <p className="text-3xl md:text-4xl font-bold text-foreground">99</p>
+                    <p className="text-xs text-muted-foreground mt-1">new followers</p>
+                    <p className="text-xs text-brand-green font-medium mt-1">in 48 hours</p>
                   </div>
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">647</p>
-                  <p className="text-xs text-muted-foreground mt-1">reactions + comments</p>
-                  <p className="text-xs text-brand-pink font-medium mt-1">some were heated</p>
-                </div>
-              </div>
 
-              {/* Secondary Stats Row */}
-              <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10 py-6 border-y border-border">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-foreground">76,922</p>
-                  <p className="text-xs text-muted-foreground">members reached</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-foreground">188</p>
-                  <p className="text-xs text-muted-foreground">profile views</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-foreground">31</p>
-                  <p className="text-xs text-muted-foreground">shares</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-foreground">66</p>
-                  <p className="text-xs text-muted-foreground">saves</p>
+                  {/* Engagement */}
+                  <div className="bg-muted/50 rounded-xl p-5 text-center flex-1 flex flex-col justify-center">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <Heart className="w-5 h-5 text-brand-pink" />
+                      <MessageCircle className="w-5 h-5 text-brand-pink" />
+                    </div>
+                    <p className="text-3xl md:text-4xl font-bold text-foreground">647</p>
+                    <p className="text-xs text-muted-foreground mt-1">reactions + comments</p>
+                    <p className="text-xs text-brand-pink font-medium mt-1">some were heated</p>
+                  </div>
                 </div>
               </div>
 
