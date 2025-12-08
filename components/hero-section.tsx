@@ -96,7 +96,7 @@ export function HeroSection() {
         <motion.div variants={itemVariants} className="mb-10 flex flex-col items-center gap-2">
           <span className="inline-flex flex-col items-center gap-1 rounded-full bg-brand-yellow px-8 py-2 text-center text-base font-medium text-black md:text-lg">
             <motion.span variants={pulseVariants} animate="animate">
-              Actively interviewing for Senior / Principal DevRel, DX, and Solutions roles. Remote, US-based (ET).
+              Actively interviewing for Senior / Principal DevRel, DX, and Solutions roles. Remote, US-based (ET). 
             </motion.span>
             <span className="text-sm md:text-base">
               Contact:{" "}
