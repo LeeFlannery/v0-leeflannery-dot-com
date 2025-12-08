@@ -235,8 +235,8 @@ export function ContentCommunitySection() {
 
               {/* Closing statement */}
               <p className="text-center text-muted-foreground italic mb-8">
-                &ldquo;This is DevRel in action: Making developers care enough to have opinions about JavaScript
-                runtimes.&rdquo;
+                &ldquo;Making developers care enough to have opinions about JavaScript runtimes: that&apos;s Full Stack
+                Drip.&rdquo;
               </p>
 
               {/* CTA */}
