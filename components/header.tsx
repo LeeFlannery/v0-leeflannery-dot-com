@@ -19,7 +19,7 @@ export function Header() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed left-0 right-0 top-0 z-50 bg-background/80 backdrop-blur-sm"
+      className="bg-background/80 backdrop-blur-sm"
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         {/* Logo */}
