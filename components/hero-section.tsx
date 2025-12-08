@@ -83,7 +83,7 @@ export function HeroSection() {
           variants={itemVariants}
           className="mb-4 text-center font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl"
         >
-          Developer Relations & Solutions Engineer. For modern development and AI teams.
+          Developer Relations & Solutions Engineer for modern development and AI teams.
         </motion.h2>
 
         <motion.p
@@ -96,14 +96,14 @@ export function HeroSection() {
         <motion.div variants={itemVariants} className="mb-10 flex flex-col items-center gap-2">
           <span className="inline-flex flex-col items-center gap-1 rounded-full bg-brand-yellow px-8 py-2 text-center text-base font-medium text-black md:text-lg">
             <motion.span variants={pulseVariants} animate="animate">
-              Actively open to Senior / Principal DevRel, DX, and Solutions roles. Remote, US-based (ET).
+              Actively interviewing for Senior / Principal DevRel, DX, and Solutions roles. Remote, US-based (ET).
             </motion.span>
             <span className="text-sm md:text-base">
               Contact:{" "}
               <a href="mailto:lee@fullstackdrip.com" className="underline hover:no-underline">
                 lee@fullstackdrip.com
               </a>{" "}
-              or schedule a call below.
+              or schedule a video call with me below.
             </span>
           </span>
         </motion.div>

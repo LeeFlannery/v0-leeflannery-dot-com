@@ -8,22 +8,27 @@ export function AboutSection() {
     {
       heading: "Hi, I'm Lee!",
       content:
-        "I've spent two decades doing the work DevRel teams do: building demos, explaining complex systems to different audiences, creating documentation developers use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users - but what I enjoy most is helping other developers get unstuck.",
+        "My favorite thing is helping other developers get unstuck.",
     },
     {
       heading: null,
       content:
-        "I find patterns, ask the right questions, and bring clarity to messy problems. I'm big on building in public and sharing what I learn - wins and failures. Developer communities made me better, and I try to give that back.",
+        "I've spent two decades doing the work DevRel teams do: building demos, explaining complex systems to different audiences, creating documentation developers use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users.",
+    },
+    {
+      heading: null,
+      content:
+        "I find patterns, ask the right questions, and bring clarity to messy problems. I'm big on building in public and sharing what I learn.",
     },
     {
       heading: "Current Focus",
       content:
-        "Deep in AI-assisted development. Building with Claude Code and Cursor daily, exploring MCP server implementations, and figuring out multi-model orchestration with OpenRouter and AWS Bedrock. Documenting what works vs. what's just hype.",
+        "Deep in AI-assisted development. Building with Claude Code, V0.app, and Cursor daily, exploring MCP server implementations, and figuring out multi-model orchestration with OpenRouter and AWS Bedrock. Documenting what works.",
     },
     {
       heading: null,
       content:
-        "Stack is React, Next.js, TypeScript, and Python. I run Release Mode LLC for consulting, and Full Stack Drip for videos, podcasts, and content about shipping code.",
+        "My current stack is React, Next.js, TypeScript, and Python. I run Release Mode LLC for consulting, and Full Stack Drip for videos, podcasts, and content about shipping code.",
     },
     {
       heading: null,
