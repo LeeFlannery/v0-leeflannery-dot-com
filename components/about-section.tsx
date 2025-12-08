@@ -8,26 +8,26 @@ export function AboutSection() {
     {
       heading: "Hi, I'm Lee!",
       content:
-        "Solutions architect and full-stack developer with 25 years shipping production code. I've built platforms serving millions of users - from scrappy startups to global brands.",
+        "I've spent two decades doing the work DevRel teams do: building demos, explaining complex systems to different audiences, creating documentation developers actually use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users - but what I enjoy most is helping other developers get unstuck.",
     },
     {
       heading: null,
       content:
-        "I find patterns, ask the right questions, and bring clarity to messy problems. Whether it's DevRel, presales, or technical strategy, I help teams ship faster and with confidence.",
+        "I find patterns, ask the right questions, and bring clarity to messy problems. I'm big on building in public and sharing what I learn - wins and failures. Developer communities made me better, and I try to give that back.",
     },
     {
-      heading: "What I'm Building",
+      heading: "Current Focus",
       content:
-        "My stack is React, Next.js, TypeScript, and Python - focused on AI-driven workflows and modern web architecture. I run Release Mode LLC for consulting work.",
+        "Deep in AI-assisted development. Building with Claude Code and Cursor daily, exploring MCP server implementations, and figuring out multi-model orchestration with OpenRouter and AWS Bedrock. Documenting what actually works vs. what's just hype.",
     },
     {
       heading: null,
       content:
-        "I'm also building Full Stack Drip - videos, podcasts, and content about shipping code, dev culture, and navigating tech in 2025.",
+        "Stack is React, Next.js, TypeScript, and Python. I run Release Mode LLC for consulting, and Full Stack Drip for videos, podcasts, and content about shipping code.",
     },
     {
       heading: null,
-      content: "Based in Kalamazoo, MI. Let's talk!",
+      content: "Based in Kalamazoo, MI.",
     },
   ]
 
@@ -91,43 +91,41 @@ export function AboutSection() {
               transition={{ duration: 0.5, delay: 0.4 + bioSections.length * 0.1 }}
               className="text-lg md:text-xl leading-relaxed text-white/80 mt-4"
             >
-              So reach out! Connect with me on{" "}
               <a
                 href="https://www.linkedin.com/in/leeflannery/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-blue hover:text-brand-blue-light hover:underline font-medium transition-colors"
+                className="text-brand-blue hover:text-blue-300 hover:underline font-medium transition-colors"
               >
                 LinkedIn
               </a>
-              , follow me on{" "}
+              {" · "}
               <a
                 href="https://bsky.app/profile/fullstackdrip.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-purple hover:text-brand-purple-light hover:underline font-medium transition-colors"
+                className="text-brand-purple hover:text-purple-300 hover:underline font-medium transition-colors"
               >
                 Bluesky
-              </a>{" "}
-              or{" "}
+              </a>
+              {" · "}
               <a
                 href="https://www.youtube.com/@FullStackDrip"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-pink hover:text-brand-pink-light hover:underline font-medium transition-colors"
+                className="text-brand-pink hover:text-pink-300 hover:underline font-medium transition-colors"
               >
                 YouTube
               </a>
-              , or{" "}
+              {" · "}
               <a
                 href="https://cal.com/leeflannery/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-green hover:text-brand-green-light hover:underline font-medium transition-colors"
+                className="text-brand-green hover:text-green-300 hover:underline font-medium transition-colors"
               >
-                schedule a call
+                Book a call
               </a>
-              . I'm here to help, collaborate, or just talk tech!
             </motion.p>
           </div>
         </motion.div>

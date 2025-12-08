@@ -15,7 +15,7 @@ const projects = [
     video: null,
     tech: ["Next.js 16", "TypeScript", "Tailwind v4", "Framer Motion", "Bun", "v0"],
     demoUrl: "https://leeflannery.com",
-    codeUrl: "https://github.com/LeeFlannery/leeflannery.com",
+    codeUrl: "https://github.com/LeeFlannery/v0-leeflannery-dot-com",
     breakdownUrl: "/projects/leeflannery-com",
     cardBg: "#FEF9C3",
     logos: [{ src: "/logos/v0.svg", alt: "v0" }],

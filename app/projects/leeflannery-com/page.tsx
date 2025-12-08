@@ -211,7 +211,7 @@ export default function LeeFlanneryComPage() {
               You're Already Here
             </a>
             <a
-              href="https://github.com/LeeFlannery/leeflannery.com"
+              href="https://github.com/LeeFlannery/v0-leeflannery-dot-com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-muted text-foreground font-medium hover:bg-muted/80 transition-colors"
