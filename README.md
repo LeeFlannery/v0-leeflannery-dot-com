@@ -1,30 +1,61 @@
-# Hero section with toggle
+# LeeFlannery.com
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Personal portfolio site for Lee Flannery - solutions architect, developer relations engineer, and creator of Full Stack Drip.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/lees-projects-b5c83d1b/v0-hero-section-with-toggle)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/c1FO7lJsR8h)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://leeflannery.com)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0-black?style=for-the-badge)](https://v0.app)
 
-## Overview
+## Tech Stack
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- **Framework:** Next.js 15 (App Router)
+- **Runtime:** Bun
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Language:** TypeScript
+- **Deployment:** Vercel
+- **Built with:** v0
 
-## Deployment
+## Getting Started
 
-Your project is live at:
+\`\`\`bash
+# Clone the repo
+git clone https://github.com/LeeFlannery/leeflannery.com.git
+cd leeflannery.com
 
-**[https://vercel.com/lees-projects-b5c83d1b/v0-hero-section-with-toggle](https://vercel.com/lees-projects-b5c83d1b/v0-hero-section-with-toggle)**
+# Install dependencies
+bun install
 
-## Build your app
+# Run dev server
+bun run dev
 
-Continue building your app on:
+# Build for production
+bun run build
 
-**[https://v0.app/chat/c1FO7lJsR8h](https://v0.app/chat/c1FO7lJsR8h)**
+# Start production server
+bun run start
 
-## How It Works
+# Lint
+bun run lint
+\`\`\`
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## Live Site
+
+**[https://leeflannery.com](https://leeflannery.com)**
+
+## Features
+
+- Animated hero section with typewriter effect
+- Portfolio grid showcasing projects with tech breakdowns
+- Video showcase integration
+- Responsive design with dark mode support
+- Google Analytics + Vercel Analytics
+
+## Projects Featured
+
+- **LeeFlannery.com** - This site (meta)
+- **Release Mode** - Next.js marketing site for Release Mode LLC
+- **Full Stack Drip** - Developer content brand (video, podcast, social)
+- **Circle Up** - Privacy-first social coordination app
+- **Dotfile.sys** - Dotfile management directory

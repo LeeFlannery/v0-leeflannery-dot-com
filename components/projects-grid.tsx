@@ -9,6 +9,19 @@ import { useRouter } from "next/navigation"
 
 const projects = [
   {
+    title: "LeeFlannery.com",
+    description: "This portfolio site. Built entirely with v0 as an experiment in AI-assisted development.",
+    image: "/images/lee-usa-hawaii-yellow.jpg",
+    video: null,
+    tech: ["Next.js 16", "TypeScript", "Tailwind v4", "Framer Motion", "Bun", "v0"],
+    demoUrl: "https://leeflannery.com",
+    codeUrl: "https://github.com/LeeFlannery/leeflannery.com",
+    breakdownUrl: "/projects/leeflannery-com",
+    cardBg: "#FEF9C3",
+    logos: [{ src: "/logos/v0.svg", alt: "v0" }],
+    imageFill: true,
+  },
+  {
     title: "Full Stack Drip",
     description:
       "Developer experience writing, videos, and social media. Talks on Dev Rel, Tech Advocacy and shipping code.",
@@ -28,14 +41,14 @@ const projects = [
       "AI-powered solutions architecture for growing companies. Bridging executive vision and full stack reality.",
     image: "/release-mode-hero.webp",
     video: null,
-    tech: ["Astro", "TypeScript", "Tailwind", "MDX", "PartyTown", "pnpm", "Vercel"],
+    tech: ["Astro", "TypeScript", "Tailwind", "MDX", "PartyTown", "pnpm", "AWS Amplify"],
     demoUrl: "https://releasemode.com",
     codeUrl: "https://github.com/leeflannery/releasemode",
     breakdownUrl: "/projects/release-mode",
     cardBg: "#F5C243",
     logos: [
       { src: "/logos/astro.svg", alt: "Astro" },
-      { src: "/logos/vercel.svg", alt: "Vercel" },
+      { src: "/logos/aws.svg", alt: "AWS" },
     ],
     imageFill: true,
   },
@@ -116,6 +129,10 @@ const techColors: Record<string, string> = {
   YouTube: "bg-[#FF0000] text-white",
   Figma: "bg-[#F24E1E] text-white",
   "Radix UI": "bg-[#9333EA] text-white",
+  "Framer Motion": "bg-[#60A5FA] text-white",
+  v0: "bg-[#6B7280] text-white",
+  "AWS Amplify": "bg-[#FF9900] text-black",
+  Bun: "bg-[#FBF0DF] text-[#14151A]",
 }
 
 function ProjectCard({ project, index }: { project: (typeof projects)[0]; index: number }) {
@@ -215,7 +232,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
         {/* Content */}
         <div className="p-6 bg-card flex-1 flex flex-col">
           <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
-          <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{project.description}</p>
+          <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
           {/* Tech badges */}
           <div className="flex flex-wrap gap-2 mb-4">
@@ -245,7 +262,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                     <Link
                       href={project.breakdownUrl}
                       onClick={(e) => e.stopPropagation()}
-                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 active:scale-95"
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-brand-blue text-white text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-brand-blue/25 active:scale-95"
                     >
                       <FileText className="h-4 w-4" />
                       Tech
@@ -259,7 +276,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-muted text-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-muted/80 active:scale-95"
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-brand-green text-black text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-brand-green/25 active:scale-95"
                     >
                       <ExternalLink className="h-4 w-4" />
                       Site
@@ -273,7 +290,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-muted text-foreground text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-muted/80 active:scale-95"
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-brand-yellow text-black text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-brand-yellow/25 active:scale-95"
                     >
                       <Github className="h-4 w-4" />
                       Code
@@ -300,7 +317,7 @@ export function ProjectsGrid() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Portfolio.</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">My Portfolio</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A selection of things I&apos;ve built, shipped, and am currently working on.
           </p>

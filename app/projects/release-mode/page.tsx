@@ -222,8 +222,8 @@ export default function ReleaseModePage() {
         <div className="max-w-4xl mx-auto">
           <h3 className="font-semibold text-foreground mb-3">Deployment</h3>
           <p className="text-muted-foreground text-sm">
-            Configured for Netlify and Vercel. Optimized caching strategies (1-year TTL for static assets). Google
-            Analytics with privacy-focused Partytown integration.
+            Hosted on AWS Amplify with Route 53 for DNS. Optimized caching strategies (1-year TTL for static assets).
+            Google Analytics with privacy-focused Partytown integration.
           </p>
         </div>
       </section>
