@@ -1,17 +1,6 @@
 "use client"
 
-import {
-  Linkedin,
-  Youtube,
-  ExternalLink,
-  Eye,
-  Users,
-  UserPlus,
-  Heart,
-  MessageCircle,
-  Repeat2,
-  Bookmark,
-} from "lucide-react"
+import { Linkedin, Youtube, Eye, UserPlus, Heart, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function ContentCommunitySection() {
@@ -172,125 +161,97 @@ export function ContentCommunitySection() {
 
         {/* Featured LinkedIn Post Section */}
         <div className="mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-2">
-              Developer Content That Performs
-            </h3>
-            <p className="text-muted-foreground">Recent LinkedIn Analysis: Anthropic&apos;s Bun Acquisition</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {/* Left Side - LinkedIn Post Card (60%) */}
-            <div className="lg:col-span-3 bg-white rounded-xl shadow-lg border border-border p-6">
-              <div className="flex items-start gap-3 mb-4">
-                <Linkedin className="w-5 h-5 text-[#0A66C2] flex-shrink-0 mt-1" />
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/images/linked3.png"
-                    alt="Lee Flannery"
-                    className="w-12 h-12 rounded-full object-cover object-top"
-                  />
-                  <div>
-                    <p className="font-semibold text-gray-900">Lee Flannery</p>
-                    <p className="text-sm text-gray-500">Solutions Engineer | Dev Rel & DX | Creator</p>
-                  </div>
+          <div className="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
+            {/* Hero Header */}
+            <div className="bg-[#0A66C2] px-6 py-8 md:px-10 md:py-10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-white/20 rounded-full p-2">
+                  <Linkedin className="w-6 h-6 text-white" />
                 </div>
+                <span className="text-white/80 text-sm font-medium uppercase tracking-wider">Featured Post</span>
               </div>
-
-              <div className="space-y-4 text-gray-800 mb-6">
-                <p className="font-semibold">WHOA. Anthropic just acquired Bun.</p>
-                <p className="text-sm leading-relaxed">
-                  If you&apos;re not familiar, Bun is a JavaScript runtime, package manager, bundler, and test runner
-                  all rolled into one. A lot of my current videos are about these kinds of tools, but the thing about
-                  Bun is - it&apos;s the runtime. Not just tooling on top of Node. The actual runtime. And this thing is
-                  FAST. A lot faster than Node.js.
-                </p>
-                <p className="text-sm leading-relaxed">
-                  Here&apos;s why this is huge: Claude Code hit $1 billion in run-rate revenue in six months.
-                  That&apos;s insane growth for a coding tool.
-                </p>
-                <p className="text-sm leading-relaxed">
-                  And now Anthropic owns the entire stack - from the AI model generating your code down to the runtime
-                  executing it. They control the whole pipeline. And Bun is legit good if I do say so myself.
-                </p>
-              </div>
-
-              <a
-                href="https://www.linkedin.com/feed/update/urn:li:activity:7401705844406419457/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-[#0A66C2] font-medium hover:underline"
-              >
-                Read full post on LinkedIn <ExternalLink className="w-4 h-4 ml-1" />
-              </a>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-white leading-tight text-balance">
+                This Post About a JavaScript Runtime Got 116K+ Impressions and Made Some People Mad
+              </h3>
             </div>
 
-            {/* Right Side - Stats Dashboard (40%) */}
-            <div className="lg:col-span-2 bg-card rounded-xl shadow-lg border border-border p-6">
-              <h4 className="text-xl font-bold text-foreground mb-6">Impact</h4>
+            {/* Content Area */}
+            <div className="p-6 md:p-10">
+              {/* Story intro */}
+              <p className="text-lg md:text-xl text-foreground mb-8 leading-relaxed">
+                Anthropic acquired Bun. I wrote why this matters for AI development. Some developers agreed. Some
+                didn&apos;t. <span className="font-semibold">Everyone engaged.</span>
+              </p>
 
-              <div className="space-y-4">
-                {/* Primary Stats - Large */}
-                <div className="grid grid-cols-2 gap-4 pb-4 border-b border-border">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center gap-2 mb-1">
-                      <Eye className="w-4 h-4 text-[#0A66C2]" />
-                    </div>
-                    <p className="text-3xl font-bold text-foreground">116,647</p>
-                    <p className="text-xs text-muted-foreground">Impressions</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center gap-2 mb-1">
-                      <Users className="w-4 h-4 text-[#0A66C2]" />
-                    </div>
-                    <p className="text-3xl font-bold text-foreground">76,922</p>
-                    <p className="text-xs text-muted-foreground">Members Reached</p>
-                  </div>
+              {/* Big Stats Grid */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">
+                {/* Primary Stat - Impressions */}
+                <div className="col-span-2 bg-[#0A66C2]/5 border-2 border-[#0A66C2]/20 rounded-xl p-6 text-center">
+                  <Eye className="w-8 h-8 text-[#0A66C2] mx-auto mb-2" />
+                  <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A66C2]">116,647</p>
+                  <p className="text-sm text-muted-foreground mt-1">impressions</p>
+                  <p className="text-xs text-[#0A66C2] font-medium mt-2">That&apos;s a lot of developers reached.</p>
                 </div>
 
-                {/* Profile Activity */}
-                <div className="grid grid-cols-2 gap-4 pb-4 border-b border-border">
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-foreground">188</p>
-                    <p className="text-xs text-muted-foreground">Profile Views</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center gap-1 mb-0">
-                      <UserPlus className="w-3 h-3 text-[#0A66C2]" />
-                    </div>
-                    <p className="text-2xl font-bold text-foreground">99</p>
-                    <p className="text-xs text-muted-foreground">Followers Gained</p>
-                  </div>
+                {/* New Followers */}
+                <div className="bg-muted/50 rounded-xl p-5 text-center flex flex-col justify-center">
+                  <UserPlus className="w-6 h-6 text-brand-green mx-auto mb-2" />
+                  <p className="text-3xl md:text-4xl font-bold text-foreground">99</p>
+                  <p className="text-xs text-muted-foreground mt-1">new followers</p>
+                  <p className="text-xs text-brand-green font-medium mt-1">in 48 hours</p>
                 </div>
 
-                {/* Engagement Stats */}
-                <div className="grid grid-cols-4 gap-2">
-                  <div className="text-center">
-                    <Heart className="w-4 h-4 text-[#0A66C2] mx-auto mb-1" />
-                    <p className="text-lg font-bold text-foreground">589</p>
-                    <p className="text-[10px] text-muted-foreground">Reactions</p>
+                {/* Engagement */}
+                <div className="bg-muted/50 rounded-xl p-5 text-center flex flex-col justify-center">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <Heart className="w-5 h-5 text-brand-pink" />
+                    <MessageCircle className="w-5 h-5 text-brand-pink" />
                   </div>
-                  <div className="text-center">
-                    <MessageCircle className="w-4 h-4 text-[#0A66C2] mx-auto mb-1" />
-                    <p className="text-lg font-bold text-foreground">58</p>
-                    <p className="text-[10px] text-muted-foreground">Comments</p>
-                  </div>
-                  <div className="text-center">
-                    <Repeat2 className="w-4 h-4 text-[#0A66C2] mx-auto mb-1" />
-                    <p className="text-lg font-bold text-foreground">31</p>
-                    <p className="text-[10px] text-muted-foreground">Reposts</p>
-                  </div>
-                  <div className="text-center">
-                    <Bookmark className="w-4 h-4 text-[#0A66C2] mx-auto mb-1" />
-                    <p className="text-lg font-bold text-foreground">66</p>
-                    <p className="text-[10px] text-muted-foreground">Saves</p>
-                  </div>
+                  <p className="text-3xl md:text-4xl font-bold text-foreground">647</p>
+                  <p className="text-xs text-muted-foreground mt-1">reactions + comments</p>
+                  <p className="text-xs text-brand-pink font-medium mt-1">some were heated</p>
                 </div>
               </div>
 
-              <p className="text-xs text-muted-foreground text-center mt-6 pt-4 border-t border-border">
-                From a single post analyzing the Anthropic-Bun acquisition
+              {/* Secondary Stats Row */}
+              <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10 py-6 border-y border-border">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-foreground">76,922</p>
+                  <p className="text-xs text-muted-foreground">members reached</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-foreground">188</p>
+                  <p className="text-xs text-muted-foreground">profile views</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-foreground">31</p>
+                  <p className="text-xs text-muted-foreground">shares</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-foreground">66</p>
+                  <p className="text-xs text-muted-foreground">saves</p>
+                </div>
+              </div>
+
+              {/* Closing statement */}
+              <p className="text-center text-muted-foreground italic mb-8">
+                &ldquo;This is DevRel in action: Making developers care enough to have opinions about JavaScript
+                runtimes.&rdquo;
               </p>
+
+              {/* CTA */}
+              <div className="text-center">
+                <a
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7401705844406419457/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-[#0A66C2] hover:bg-[#004182] text-white px-8 py-6 text-lg">
+                    <Linkedin className="w-5 h-5 mr-2" />
+                    Read the full analysis
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
