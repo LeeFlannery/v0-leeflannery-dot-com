@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation"
 const projects = [
   {
     title: "LeeFlannery.com",
-    description: "This portfolio site. Built entirely with v0 as an experiment in AI-assisted development.",
+    description: "This portfolio site. Bootstrapped with v0.",
     image: "/images/lee-usa-hawaii-yellow.jpg",
     video: null,
     tech: ["Next.js 16", "TypeScript", "Tailwind v4", "Framer Motion", "Bun", "v0"],

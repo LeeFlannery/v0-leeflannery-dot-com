@@ -36,7 +36,7 @@ export default function LeeFlanneryComPage() {
       category: "Deployment",
       items: [
         { name: "Vercel", description: "Edge deployment and previews" },
-        { name: "v0", description: "AI-assisted development" },
+        { name: "v0", description: "Bootstrapped components and layouts" },
         { name: "Bun", description: "Fast package manager and runtime" },
       ],
     },
@@ -46,7 +46,7 @@ export default function LeeFlanneryComPage() {
     {
       icon: Sparkles,
       title: "Built with v0",
-      description: "Entire site developed using AI-assisted coding with v0 by Vercel",
+      description: "Bootstrapped with v0 by Vercel",
     },
     {
       icon: Palette,
@@ -108,8 +108,8 @@ export default function LeeFlanneryComPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl"
           >
-            Personal portfolio and landing page built with Next.js 16, Tailwind v4, and Framer Motion. Developed
-            entirely with v0 as an experiment in AI-assisted development.
+            Personal portfolio and landing page built with Next.js 16, Tailwind v4, and Framer Motion. Bootstrapped with
+            v0.
           </motion.p>
         </div>
       </section>
