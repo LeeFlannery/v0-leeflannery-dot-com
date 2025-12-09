@@ -81,7 +81,7 @@ export function HeroSection() {
 
         <motion.h2
           variants={itemVariants}
-          className="mb-4 text-center font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl"
+          className="mb-4 max-w-4xl text-center font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl"
         >
           Developer Relations & Solutions Engineer for modern development and AI teams.
         </motion.h2>
