@@ -29,12 +29,14 @@ export const metadata: Metadata = {
     siteName: "Lee Flannery",
     locale: "en_US",
     type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lee Flannery | Developer Relations & Solutions Engineer",
     description:
       "Two decades shipping production code. Creator of Full Stack Drip, teaching modern web development and AI tools.",
+    images: ["/og-image.jpg"],
   },
 }
 
