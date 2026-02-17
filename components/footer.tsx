@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import packageJson from "@/package.json"
 
 const footerLinks = {
   connect: [
@@ -21,6 +22,7 @@ const footerLinks = {
   resources: [
     { name: "Newsletter", href: "https://fullstackdrip.com/membership/" },
     { name: "Amazon", href: "https://amazon.com/shop/fullstackdrip" },
+    { name: "Colophon", href: "/colophon", internal: true },
   ],
 }
 
@@ -39,7 +41,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
-function FooterColumn({ title, links }: { title: string; links: { name: string; href: string }[] }) {
+function FooterColumn({ title, links }: { title: string; links: { name: string; href: string; internal?: boolean }[] }) {
   return (
     <motion.div variants={itemVariants} className="flex flex-col gap-4">
       <h3 className="font-serif text-lg font-semibold text-foreground">{title}</h3>
@@ -48,8 +50,7 @@ function FooterColumn({ title, links }: { title: string; links: { name: string; 
           <li key={link.name}>
             <Link
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(link.internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
               className="group relative text-muted-foreground transition-colors hover:text-primary"
             >
               {link.name}
@@ -82,7 +83,13 @@ export function Footer() {
           variants={itemVariants}
           className="mt-12 flex flex-col items-center gap-4 border-t border-border pt-8 text-center text-sm text-muted-foreground"
         >
-          <p>&copy; {new Date().getFullYear()} Lee Flannery. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Lee Flannery. All rights reserved.
+            {" "}&middot;{" "}
+            <Link href="/colophon" className="hover:text-foreground transition-colors">
+              v{packageJson.version}
+            </Link>
+          </p>
         </motion.div>
       </motion.div>
     </footer>
