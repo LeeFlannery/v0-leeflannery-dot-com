@@ -71,8 +71,16 @@ export default async function Image() {
           {/* URL */}
           <div
             style={{
-              fontSize: "22px",
-              color: "rgba(255,255,255,0.6)",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              background: "rgba(255,255,255,0.15)",
+              border: "2px solid rgba(255,255,255,0.3)",
+              borderRadius: "12px",
+              padding: "12px 24px",
+              fontSize: "28px",
+              fontWeight: "600",
+              color: "white",
               letterSpacing: "0.5px",
             }}
           >
