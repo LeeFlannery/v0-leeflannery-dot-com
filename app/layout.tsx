@@ -13,7 +13,7 @@ const _fraunces = Fraunces({ subsets: ["latin"], weight: ["400", "500", "600", "
 export const metadata: Metadata = {
   title: "Lee Flannery | Developer Relations & Solutions Engineer",
   description:
-    "DevRel + Forward Deployed Solutions Engineering. Video-first technical creator of Full Stack Drip, teaching modern development & AI tools. Typescript, Python, React, Next.js, AWS.",
+    "DevRel + Forward Deployed Solutions Engineer. Video-first technical creator of Full Stack Drip, teaching modern development & AI. Coding in public.",
   keywords: ["developer relations", "DevRel", "solutions engineer", "AI platform", "Next.js", "TypeScript"],
   generator: "v0.app",
   metadataBase: new URL("https://leeflannery.com"),
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lee Flannery | Developer Relations & Solutions Engineer",
     description:
-      "DevRel + Forward Deployed Solutions Engineering. Video-first technical creator of Full Stack Drip, teaching modern development & AI tools. Typescript, Python, React, Next.js, AWS.",
+      "DevRel + Forward Deployed Solutions Engineer. Video-first technical creator of Full Stack Drip, teaching modern development & AI. Coding in public.",
     url: "https://leeflannery.com",
     siteName: "Lee Flannery",
     locale: "en_US",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lee Flannery | Developer Relations & Solutions Engineer",
     description:
-      "DevRel + Forward Deployed Solutions Engineering. Video-first technical creator of Full Stack Drip, teaching modern development & AI tools. Typescript, Python, React, Next.js, AWS.",
+      "DevRel + Forward Deployed Solutions Engineer. Video-first technical creator of Full Stack Drip, teaching modern development & AI. Coding in public.",
   },
 }
 

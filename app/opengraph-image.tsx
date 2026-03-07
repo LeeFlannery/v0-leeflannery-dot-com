@@ -12,7 +12,7 @@ export default async function Image() {
         style={{
           width: "1200px",
           height: "630px",
-          background: "#1a7fd4",
+          background: "#0f4c81",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
