@@ -36,20 +36,17 @@ const projects = [
     imageFill: true, // added imageFill to make logo fill the card
   },
   {
-    title: "Release Mode",
+    title: "Morning Agents",
     description:
-      "AI-powered solutions architecture for growing companies. Bridging executive vision and full stack reality.",
-    image: "/release-mode-hero.webp",
+      "Open-source Python multi-agent daily briefing system using TypeScript MCP servers over stdio with Pydantic contracts. Built in public with published documentation.",
+    image: "/morning-agents.png",
     video: null,
-    tech: ["Astro", "TypeScript", "Tailwind", "MDX", "PartyTown", "pnpm", "AWS Amplify"],
-    demoUrl: "https://releasemode.com",
-    codeUrl: "https://github.com/leeflannery/releasemode",
-    breakdownUrl: "/projects/release-mode",
-    cardBg: "#F5C243",
-    logos: [
-      { src: "/logos/astro.svg", alt: "Astro" },
-      { src: "/logos/aws.svg", alt: "AWS" },
-    ],
+    tech: ["Python", "MCP", "Pydantic", "TypeScript", "MkDocs"],
+    demoUrl: "https://leeflannery.github.io/morning-agents/",
+    codeUrl: "https://github.com/leeflannery/morning-agents",
+    breakdownUrl: null,
+    cardBg: "#EFF6FF",
+    logos: [],
     imageFill: true,
   },
   {
@@ -94,6 +91,23 @@ const projects = [
     logos: [{ src: "/logos/vercel.svg", alt: "Vercel" }],
     imageFill: false,
   },
+  {
+    title: "Release Mode",
+    description:
+      "AI-powered solutions architecture for growing companies. Bridging executive vision and full stack reality.",
+    image: "/release-mode-hero.webp",
+    video: null,
+    tech: ["Astro", "TypeScript", "Tailwind", "MDX", "PartyTown", "pnpm", "AWS Amplify"],
+    demoUrl: "https://releasemode.com",
+    codeUrl: "https://github.com/leeflannery/releasemode",
+    breakdownUrl: "/projects/release-mode",
+    cardBg: "#F5C243",
+    logos: [
+      { src: "/logos/astro.svg", alt: "Astro" },
+      { src: "/logos/aws.svg", alt: "AWS" },
+    ],
+    imageFill: true,
+  },
 ]
 
 const techColors: Record<string, string> = {
@@ -133,6 +147,9 @@ const techColors: Record<string, string> = {
   v0: "bg-[#6B7280] text-white",
   "AWS Amplify": "bg-[#FF9900] text-black",
   Bun: "bg-[#FBF0DF] text-[#14151A]",
+  MCP: "bg-[#1C1C1C] text-white",
+  Pydantic: "bg-[#E92063] text-white",
+  MkDocs: "bg-[#526CFE] text-white",
 }
 
 function ProjectCard({ project, index }: { project: (typeof projects)[0]; index: number }) {

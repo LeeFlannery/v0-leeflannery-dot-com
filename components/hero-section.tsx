@@ -39,16 +39,6 @@ const buttonVariants = {
   },
 }
 
-const pulseVariants = {
-  animate: {
-    scale: [1, 1.02, 1],
-    transition: {
-      duration: 2,
-      repeat: Number.POSITIVE_INFINITY,
-      ease: "easeInOut",
-    },
-  },
-}
 
 export function HeroSection() {
   return (
@@ -93,20 +83,16 @@ export function HeroSection() {
           I build platforms, teach developers, and turn complex systems into demos, docs, and stories.
         </motion.p>
 
-        <motion.div variants={itemVariants} className="mb-10 flex flex-col items-center gap-2">
-          <span className="inline-flex flex-col items-center gap-1 rounded-full bg-brand-yellow px-8 py-2 text-center text-base font-medium text-black md:text-lg">
-            <motion.span variants={pulseVariants} animate="animate">
-              Actively interviewing for Senior / Principal DevRel, DX, and Solutions roles. Remote, US-based (ET). 
-            </motion.span>
-            <span className="text-sm md:text-base">
-              Contact:{" "}
-              <a href="mailto:lee@fullstackdrip.com" className="underline hover:no-underline">
-                lee@fullstackdrip.com
-              </a>{" "}
-              or schedule a video call with me below.
-            </span>
-          </span>
-        </motion.div>
+        <motion.p
+          variants={itemVariants}
+          className="mb-10 max-w-2xl text-center text-base text-muted-foreground md:text-lg"
+        >
+          Building developer content, documentation, and open-source tools. Available for DevRel and Solutions Engineering work.{" "}
+          <a href="mailto:lee@fullstackdrip.com" className="underline hover:no-underline">
+            lee@fullstackdrip.com
+          </a>{" "}
+          or schedule a call below.
+        </motion.p>
 
         {/* Buttons */}
         <motion.div variants={itemVariants} className="flex w-full max-w-2xl flex-col items-stretch gap-4 md:flex-row">

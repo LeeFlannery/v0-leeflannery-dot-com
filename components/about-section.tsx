@@ -13,7 +13,7 @@ export function AboutSection() {
     {
       heading: null,
       content:
-        "I've spent two decades doing the work DevRel teams do: building demos, explaining complex systems to different audiences, creating documentation developers use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users.",
+        "I've spent my career doing the work DevRel teams do: building demos, explaining complex systems to different audiences, creating documentation developers use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users.",
     },
     {
       heading: null,
@@ -29,6 +29,11 @@ export function AboutSection() {
       heading: null,
       content:
         "My current stack is React, Next.js, TypeScript, and Python. I run Release Mode LLC for consulting, and Full Stack Drip for videos, podcasts, and content about shipping code.",
+    },
+    {
+      heading: null,
+      content:
+        "Currently submitting conference CFPs on developer security, including \u201cI Have a Secret, It\u2019s Your API Key: Securing .env\u201d",
     },
     {
       heading: null,
