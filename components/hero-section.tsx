@@ -71,27 +71,30 @@ export function HeroSection() {
 
         <motion.h2
           variants={itemVariants}
-          className="mb-4 max-w-4xl text-center font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl"
+          className="mb-6 max-w-3xl text-center font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl lg:text-4xl"
         >
-          Developer Relations & Solutions Engineer for modern development and AI teams.
+          I help developers ship faster.
         </motion.h2>
 
         <motion.p
           variants={itemVariants}
-          className="mb-6 max-w-2xl text-center text-lg text-muted-foreground md:text-xl"
+          className="mb-3 max-w-2xl text-center text-lg text-muted-foreground md:text-xl"
         >
-          I build platforms, teach developers, and turn complex systems into demos, docs, and stories.
+          I make technical videos worth watching, docs people use, and reference implementations you can clone and run.
         </motion.p>
 
         <motion.p
           variants={itemVariants}
-          className="mb-10 max-w-2xl text-center text-base text-muted-foreground md:text-lg"
+          className="mb-3 max-w-2xl text-center text-lg text-muted-foreground md:text-xl"
         >
-          Building developer content, documentation, and open-source tools. Available for DevRel and Solutions Engineering work.{" "}
-          <a href="mailto:lee@fullstackdrip.com" className="underline hover:no-underline">
-            lee@fullstackdrip.com
-          </a>{" "}
-          or schedule a call below.
+          I&apos;ve shipped platforms used by millions. Today my work focuses on DevRel: reducing friction, teaching developers, and building in public.
+        </motion.p>
+
+        <motion.p
+          variants={itemVariants}
+          className="mb-10 max-w-2xl text-center text-lg text-muted-foreground md:text-xl"
+        >
+          I help developers move faster because I know where the friction lives.
         </motion.p>
 
         {/* Buttons */}
