@@ -1,20 +1,30 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Geist, Geist_Mono, Fraunces } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { ThemeProvider } from "@/components/theme-provider"
-import Script from "next/script"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import Script from "next/script";
+import "./globals.css";
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
-const _fraunces = Fraunces({ subsets: ["latin"], weight: ["400", "500", "600", "700"] })
+const _geist = Geist({ subsets: ["latin"] });
+const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
-  title: "Lee Flannery | Developer Relations & Solutions Engineer",
+  title: "Lee Flannery | Developer and Creator",
   description:
-    "DevRel + Forward Deployed Solutions Engineer. Video-first technical creator of Full Stack Drip, teaching modern development & AI. Coding in public.",
-  keywords: ["developer relations", "DevRel", "solutions engineer", "AI platform", "Next.js", "TypeScript"],
+    "Developer Relations Engineer. Shipped code to millions. Video-first technical creator of Full Stack Drip. I help developers ship faster.",
+  keywords: [
+    "developer relations",
+    "DevRel",
+    "solutions engineer",
+    "AI platform",
+    "Next.js",
+    "TypeScript",
+  ],
   generator: "v0.app",
   metadataBase: new URL("https://leeflannery.com"),
   icons: {
@@ -22,9 +32,9 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Lee Flannery | Developer Relations & Solutions Engineer",
+    title: "Lee Flannery | Developer and Creator",
     description:
-      "DevRel + Forward Deployed Solutions Engineer. Video-first technical creator of Full Stack Drip, teaching modern development & AI. Coding in public.",
+      "Developer Relations Engineer. Shipped code to millions. Video-first technical creator of Full Stack Drip. I help developers ship faster.",
     url: "https://leeflannery.com",
     siteName: "Lee Flannery",
     locale: "en_US",
@@ -32,21 +42,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lee Flannery | Developer Relations & Solutions Engineer",
+    title: "Lee Flannery | Developer and Creator",
     description:
-      "DevRel + Forward Deployed Solutions Engineer. Video-first technical creator of Full Stack Drip, teaching modern development & AI. Coding in public.",
+      "Developer Relations Engineer. Shipped code to millions. Video-first technical creator of Full Stack Drip. I help developers ship faster.",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-KGSRDG121C" strategy="afterInteractive" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-KGSRDG121C"
+          strategy="afterInteractive"
+        />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -61,5 +74,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

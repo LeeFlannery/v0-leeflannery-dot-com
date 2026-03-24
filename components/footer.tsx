@@ -21,7 +21,7 @@ const footerLinks = {
   ],
   resources: [
     { name: "Newsletter", href: "https://fullstackdrip.com/membership/" },
-    { name: "Amazon", href: "https://amazon.com/shop/fullstackdrip" },
+    { name: "Amazon", href: "https://amazon.com/shop/fullstackdrip?tag=releasemode0e-20" },
     { name: "Colophon", href: "/colophon", internal: true },
   ],
 }

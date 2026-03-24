@@ -91,16 +91,9 @@ export function HeroSection() {
 
         <motion.p
           variants={itemVariants}
-          className="mb-3 max-w-2xl text-center text-lg text-muted-foreground md:text-xl"
-        >
-          I&apos;ve shipped platforms used by millions. Today my work focuses on DevRel: reducing friction, teaching developers, and building in public.
-        </motion.p>
-
-        <motion.p
-          variants={itemVariants}
           className="mb-10 max-w-2xl text-center text-lg text-muted-foreground md:text-xl"
         >
-          I help developers move faster because I know where the friction lives.
+          I&apos;ve shipped platforms used by millions. Today my work focuses on DevRel: reducing friction, teaching developers, and building in public.
         </motion.p>
 
         {/* Buttons */}

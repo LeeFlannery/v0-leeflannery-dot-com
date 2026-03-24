@@ -1,34 +1,67 @@
 "use client"
 
+import type React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
 export function AboutSection() {
-  const bioSections = [
+  const bioSections: { heading: string | null; content: React.ReactNode }[] = [
     {
       heading: "Hi, I'm Lee!",
       content:
-        "My favorite thing is helping other developers get unstuck.",
+        "My favorite thing about software is working with other devs.",
     },
     {
       heading: null,
       content:
-        "I've spent my career doing the work DevRel teams do: building demos, explaining complex systems to different audiences, creating documentation developers use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users.",
+        "I've spent my career in DevRel work: building demos, explaining complex systems to different audiences, creating documentation developers use, and shipping reference implementations. Along the way, I've also scaled production systems to millions of users.",
     },
     {
       heading: null,
       content:
-        "I find patterns, ask the right questions, and bring clarity to messy problems. I'm big on building in public and sharing what I learn.",
+        "I find patterns, ask the right questions, and bring clarity to messy problems. I build in public and share what I learn.",
     },
     {
       heading: "Current Focus",
-      content:
-        "Deep in AI-assisted development. Building with Claude Code, V0.app, and Cursor daily, exploring MCP server implementations, and figuring out multi-model orchestration with OpenRouter and AWS Bedrock. Documenting what works.",
+      content: (
+        <>
+          Agentic AI development. Building with Claude Code, V0.app, and Codex. Multi-model and multi-agent
+          orchestration. Homegrown open-source projects like{" "}
+          <a
+            href="https://leeflannery.github.io/morning-agents/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:no-underline"
+          >
+            Morning Agents
+          </a>
+          .
+        </>
+      ),
     },
     {
       heading: null,
       content:
-        "My current stack is React, Next.js, TypeScript, and Python. I run Release Mode LLC for consulting, and Full Stack Drip for videos, podcasts, and content about shipping code.",
+        "I create video, written content, documentation, and commentary.",
+    },
+    {
+      heading: null,
+      content: (
+        <>
+          At <a href="https://fullstackdrip.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-blue hover:text-blue-300 hover:underline font-medium transition-colors"
+          >Full Stack Drip</a>, I produce technical content for software developers and power users. I
+          do tutorials, tool breakdowns, and workflow commentary published across YouTube, TikTok, Instagram, and a
+          blog.
+        </>
+      ),
+    },
+    {
+      heading: null,
+      content:
+        "At Release Mode LLC, I create video and written content for third-party clients, helping companies communicate technical concepts to developer audiences.",
     },
     {
       heading: null,
@@ -37,7 +70,7 @@ export function AboutSection() {
     },
     {
       heading: null,
-      content: "Based in Kalamazoo, MI.",
+      content: "Based in Kalamazoo, MI in the Eastern Time Zone.",
     },
   ]
 

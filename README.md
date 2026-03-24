@@ -7,13 +7,15 @@ Personal portfolio site for Lee Flannery - solutions architect, developer relati
 
 ## Tech Stack
 
-- **Framework:** Next.js 15 (App Router)
+- **Framework:** Next.js 16 (App Router)
+- **UI Library:** React 19
 - **Runtime:** Bun
 - **Styling:** Tailwind CSS v4
+- **Components:** shadcn/ui (Radix UI)
 - **Animations:** Framer Motion
 - **Language:** TypeScript
 - **Deployment:** Vercel
-- **Built with:** v0
+- **Built with:** v0 originally but maintained by Claude Code, Codex, and my own hands
 
 ## Getting Started
 
@@ -54,8 +56,10 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## Projects Featured
 
-- **LeeFlannery.com** - This site (meta)
-- **Release Mode** - Next.js marketing site for Release Mode LLC
-- **Full Stack Drip** - Developer content brand (video, podcast, social)
-- **Circle Up** - Privacy-first social coordination app
-- **Dotfile.sys** - Dotfile management directory
+- **LeeFlannery.com** - This site (meta), bootstrapped with v0
+- **Full Stack Drip** - Developer content brand (video, tutorials, social)
+- **Morning Agents** - Open-source Python multi-agent daily briefing system with MCP
+- **Love Taps** - Relationship check-in app for couples, bootstrapped with v0
+- **Circle Up** - Privacy-focused community platform with Supabase
+- **Dotfile.sys** - Retro terminal-styled dotfile manager
+- **Release Mode** - Astro marketing site for Release Mode LLC, deployed on AWS Amplify
