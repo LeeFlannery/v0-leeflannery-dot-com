@@ -63,3 +63,8 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 - **Circle Up** - Privacy-focused community platform with Supabase
 - **Dotfile.sys** - Retro terminal-styled dotfile manager
 - **Release Mode** - Astro marketing site for Release Mode LLC, deployed on AWS Amplify
+
+## License
+
+- **Code** — [MIT License](./LICENSE)
+- **Content** — [All rights reserved](./CONTENT_LICENSE.md) (writing, images, branding, media)
