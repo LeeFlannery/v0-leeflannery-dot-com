@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ExternalLink, Github, FileText } from "lucide-react"
+import { ExternalLink, Github, FileText, Youtube } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
@@ -17,6 +17,7 @@ const projects = [
     demoUrl: "https://leeflannery.com",
     codeUrl: "https://github.com/LeeFlannery/v0-leeflannery-dot-com",
     breakdownUrl: "/projects/leeflannery-com",
+    videoUrl: null,
     cardBg: "#FEF9C3",
     logos: [{ src: "/logos/v0.svg", alt: "v0" }],
     imageFill: true,
@@ -31,9 +32,10 @@ const projects = [
     demoUrl: "https://fullstackdrip.com",
     codeUrl: null,
     breakdownUrl: "/projects/full-stack-drip",
+    videoUrl: null,
     cardBg: "#FDF2F8",
     logos: [{ src: "/logos/ghost-orb.png", alt: "Ghost" }],
-    imageFill: true, // added imageFill to make logo fill the card
+    imageFill: true,
   },
   {
     title: "Morning Agents",
@@ -45,23 +47,25 @@ const projects = [
     demoUrl: "https://leeflannery.github.io/morning-agents/",
     codeUrl: "https://github.com/leeflannery/morning-agents",
     breakdownUrl: null,
+    videoUrl: null,
     cardBg: "#EFF6FF",
     logos: [],
     imageFill: true,
   },
   {
-    title: "HushCut",
+    title: "Love Taps",
     description:
-      "AI-powered silence removal tool that automatically detects and cuts silent segments from video and audio files.",
-    image: "/ai-video-editing-app-with-waveform-visualization.jpg",
+      "A playful relationship check-in app for couples. Send love taps, track connection streaks, and stay in sync. Bootstrapped with v0.",
+    image: "/love-taps.png",
     video: null,
-    tech: ["Next.js", "Python", "FFmpeg"],
-    demoUrl: "#",
-    codeUrl: "#",
+    tech: ["Next.js 16", "TypeScript", "Tailwind", "Framer Motion", "Radix UI", "React Hook Form", "Zod", "v0"],
+    demoUrl: "https://v0-love-taps.vercel.app/",
+    codeUrl: "https://github.com/LeeFlannery/v0-love-taps",
     breakdownUrl: null,
-    cardBg: null,
-    logos: [],
-    imageFill: false,
+    videoUrl: "https://youtu.be/24PM-YGcrhI?si=ln7rh63wMdHmE9V5",
+    cardBg: "#FDF0FF",
+    logos: [{ src: "/logos/v0.svg", alt: "v0" }],
+    imageFill: true,
   },
   {
     title: "Circle Up",
@@ -73,6 +77,7 @@ const projects = [
     demoUrl: "https://circle-up-alpha.vercel.app/",
     codeUrl: "https://github.com/LeeFlannery/circle-up",
     breakdownUrl: "/projects/circle-up",
+    videoUrl: null,
     cardBg: "#FEF3E2",
     logos: [{ src: "/logos/vercel.svg", alt: "Vercel" }],
     imageFill: false,
@@ -87,6 +92,7 @@ const projects = [
     demoUrl: "https://dotfile-sys.vercel.app/",
     codeUrl: "https://github.com/LeeFlannery/v0-dotfile-directory-web-app",
     breakdownUrl: "/projects/dotfile-sys",
+    videoUrl: null,
     cardBg: "#1a1a1a",
     logos: [{ src: "/logos/vercel.svg", alt: "Vercel" }],
     imageFill: false,
@@ -101,6 +107,7 @@ const projects = [
     demoUrl: "https://releasemode.com",
     codeUrl: "https://github.com/leeflannery/releasemode",
     breakdownUrl: "/projects/release-mode",
+    videoUrl: null,
     cardBg: "#F5C243",
     logos: [
       { src: "/logos/astro.svg", alt: "Astro" },
@@ -157,7 +164,10 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
   const router = useRouter()
 
   const hasActions =
-    project.breakdownUrl || (project.demoUrl && project.demoUrl !== "#") || (project.codeUrl && project.codeUrl !== "#")
+    project.breakdownUrl ||
+    (project.demoUrl && project.demoUrl !== "#") ||
+    (project.codeUrl && project.codeUrl !== "#") ||
+    project.videoUrl
 
   const buttonContainerVariants = {
     hidden: { opacity: 0 },
@@ -311,6 +321,20 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                     >
                       <Github className="h-4 w-4" />
                       Code
+                    </a>
+                  </motion.div>
+                )}
+                {project.videoUrl && (
+                  <motion.div variants={buttonVariants}>
+                    <a
+                      href={project.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#FF0000] text-white text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 active:scale-95"
+                    >
+                      <Youtube className="h-4 w-4" />
+                      Video
                     </a>
                   </motion.div>
                 )}
