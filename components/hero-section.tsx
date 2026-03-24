@@ -80,7 +80,13 @@ export function HeroSection() {
           variants={itemVariants}
           className="mb-3 max-w-2xl text-center text-lg text-muted-foreground md:text-xl"
         >
-          I make technical videos worth watching, docs people use, and reference implementations you can clone and run.
+          I make technical{" "}
+          <a href="https://youtu.be/24PM-YGcrhI?si=ln7rh63wMdHmE9V5" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">videos</a>{" "}
+          worth watching,{" "}
+          <a href="https://leeflannery.github.io/morning-agents/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">docs</a>{" "}
+          people use, and{" "}
+          <a href="https://github.com/leeflannery/morning-agents" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">reference implementations</a>{" "}
+          you can clone and run.
         </motion.p>
 
         <motion.p
