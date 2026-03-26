@@ -142,7 +142,7 @@ export function ContentCommunitySection() {
         </div>
 
         {/* Featured LinkedIn Post Section */}
-        <div className="mb-16" ref={linkedInRef}>
+        <div className="mb-16" id="linkedin-post" ref={linkedInRef}>
           <div
             className={`bg-card rounded-2xl shadow-xl border border-border overflow-hidden transition-all duration-700 ease-out ${
               linkedInVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
